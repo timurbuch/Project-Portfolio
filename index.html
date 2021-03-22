@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="<link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b415e1b71a.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav>
@@ -30,22 +31,62 @@
             <section id="projects">
                 <div class="project-container">
                     <h2>Projects</h2> 
-                    <ul class="tab-list">
-                        <li class="active"><a class="tab-control" href="#tab-1">Project 1</a></li>
-                        <li><a class="tab-control" href="#tab-2"></a>Project 2</li>
-                        <li><a class="tab-control" href="#tab-3"></a>Project 3</li>
-                    </ul>
-                    <div class="tab-panel active" id="tab-1">Project 1</div>
-                    <div class="tab-panel" id="tab-2">Project 2</div>
-                    <div class="tab-panel" id="tab-3">Project 3</div>
+                        <div class="tab">
+                            <button class="tablinks" onclick="openProject(event, 'Project-1')">Project 1</button>
+                            <button class="tablinks" onclick="openProject(event, 'Project-2')">Project 2</button>
+                            <button class="tablinks" onclick="openProject(event, 'Project-3')">Project 3</button>
+                        </div>
+                        <div id="Project-1" class="tabcontent">
+                            <h3>Project-1</h3>
+                            <p>Project-1 is the capital city of England.</p>
+                          </div>
+                          
+                          <div id="Project-2" class="tabcontent">
+                            <h3>Project 2</h3>
+                            <p>Project 2 is the capital of France.</p> 
+                          </div>
+                          
+                          <div id="Project-3" class="tabcontent">
+                            <h3>Project 3</h3>
+                            <p>Project 3 is the capital of Japan.</p>
+                          </div>
 
 
 
                 </div>
 
             </section>
-            <section></section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div id="skills-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-react"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-github"></i>
+                <i class="fas fa-terminal"></i>
+                <i class="fab fa-npm"></i>
+                <i class="fab fa-node"></i>
+
+                </div>
+            </section>
         </main>
         <footer></footer>
+        <script>
+            function openProject(evt, Projectname) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(Projectname).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            </script>
     </body>
 </html>
