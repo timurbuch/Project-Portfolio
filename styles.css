@@ -52,8 +52,6 @@ a {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-}
-.icon {
     font-size: 2em;
     color: var(--font-color);
     margin: 0 var(--spacing-1);
