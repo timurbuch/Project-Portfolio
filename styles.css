@@ -13,7 +13,7 @@ html, body{
 } 
 h1{
     font-weight: bold;
-    font-family: 'Roboto Condensed 700', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 nav {
@@ -40,6 +40,12 @@ a {
     color: var(--font-color);
     text-decoration: none;
     font-weight: 600;
+}
+.tab-panel{
+    display:none;
+}
+.tab-panel.active{
+    display:block;
 }
 .fab {
     font-family: "Font Awesome 5 Brands";
